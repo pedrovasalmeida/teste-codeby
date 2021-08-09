@@ -18,21 +18,15 @@ interface CartContextProps {
   databaseType: DatabaseType;
   changeDatabase: (option: DatabaseType) => void;
   removeProductFromList: (productId: string) => void;
-  getToast: (type: 'success' | 'error') => void;
 }
 
 const CartContext = createContext({} as CartContextProps);
-
 
 export const ProductsProvider: React.FC = ({ children }) => {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [totalItemsInCart, setTotalItemsInCart] = useState(0);
   const [totalCartPrice, setTotalCartPrice] = useState(0);
   const [databaseType, setDatabaseType] = useState<DatabaseType>('abaixo');
-
-  function getToast(type: 'success' | 'error') {
-    toast('easy');
-  }
 
   function getProductDataFromJSONDatabase(type: 'abaixo' | 'acima') {
     switch(type) {
@@ -131,7 +125,6 @@ export const ProductsProvider: React.FC = ({ children }) => {
       databaseType, 
       removeProductFromList, 
       totalItemsInCart,
-      getToast
     }}>{children}</CartContext.Provider>
   );
 }
