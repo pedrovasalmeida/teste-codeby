@@ -25,7 +25,7 @@ import {
 } from './styles';
 
 export const Cart: React.FC = () => {
-  const { products, totalCartPrice, databaseType, removeProductFromList, totalItemsInCart, changeDatabase, getToast } = useProducts();
+  const { products, totalCartPrice, databaseType, removeProductFromList, totalItemsInCart, changeDatabase } = useProducts();
   const [showFreeShippingMessage, setShowFreeShippingMessage] = useState(databaseType === 'abaixo' ? false : true);
 
   function formatCurrency(value: number) { 
