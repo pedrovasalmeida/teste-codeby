@@ -8,7 +8,7 @@ Repositório direcionado ao teste para vaga de desenvolvedor na Codeby.
 
 O projeto se encontra online, e pode ser acessado através do link:
 
-[Carrinho - Codeby]()
+[Carrinho - Codeby](https://teste-codeby-ph.vercel.app/)
 
 ---
 
@@ -22,3 +22,13 @@ e, para rodar o projeto localmente, utilize:
 ```
 yarn start
 ```
+
+---
+
+## Tecnologias utilizadas:
+
+- React
+- Typescript
+- React Icons
+- Styled Components
+- Polished
