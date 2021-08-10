@@ -117,14 +117,6 @@ export const DetailsBox = styled.div`
 
 export const ProductTitle = styled.h1`
   font-size: 14px;
-  
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  @media only screen and (max-width: 475px) {
-    padding-right: 16px;
-  }
 `;
 
 export const DiscountPrice = styled.div`

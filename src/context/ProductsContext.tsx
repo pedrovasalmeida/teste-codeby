@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-import { toast } from 'react-toastify';
-
 /** Data */
 import DatabaseAbaixo10 from '../database/abaixo-10.json';
 import DatabaseAcima10 from '../database/acima-10.json';
@@ -80,19 +78,11 @@ export const ProductsProvider: React.FC = ({ children }) => {
   }
 
   function removeProductFromList(productId: string) {
-    const filteredProducts = products.filter(product => product.productId !== productId);
+    if (window.confirm('Tem certeza que deseja remover o produto do carrinho?')) {
+      const filteredProducts = products.filter(product => product.productId !== productId);
     
-    setProducts([...filteredProducts]);
-
-    toast.error(`Produto removido do carrinho`, {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+      setProducts([...filteredProducts]);
+    }
   }
 
   useEffect(() => {
