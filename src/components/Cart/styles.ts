@@ -16,11 +16,20 @@ export const Container = styled.div`
 
   border-radius: 8px;
   filter: drop-shadow(0px 0px 6px #999);
+
+  @media only screen and (max-width: 536px) {
+    width: 100%;
+  }
 `;
 
 export const CartTitle = styled.h1`
   font-size: 22px;
   margin: 16px 0;
+
+  @media only screen and (max-width: 340px) {
+    margin-right: auto;
+    margin-left: 16px;
+  }
 `;
 
 export const ProductsList = styled.div`
@@ -30,7 +39,7 @@ export const ProductsList = styled.div`
   padding: 16px;
   border-top: 1px solid #ddd;
 
-  overflow-y: auto;
+  overflow: auto;
 `;
 
 export const EmptyCartMessage = styled.div`
@@ -79,12 +88,22 @@ export const Product = styled.div`
       transform: scale(1.25);
       color: #e54;
     }
+
+    @media only screen and (max-width: 490px) {
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      min-height: 20px;
+    }
   }
 `;
 
 export const Image = styled.img`
+  min-width: 100px;
   width: 100px;
+  min-height: 100px;
   height: 100px;
+
   margin-left: 8px;
   border: 1px solid #ccc;
 `;
@@ -98,6 +117,14 @@ export const DetailsBox = styled.div`
 
 export const ProductTitle = styled.h1`
   font-size: 14px;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media only screen and (max-width: 475px) {
+    padding-right: 16px;
+  }
 `;
 
 export const DiscountPrice = styled.div`

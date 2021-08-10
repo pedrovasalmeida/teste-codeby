@@ -27,12 +27,11 @@ export const Container = styled.div`
   & > button {
       position: fixed;
       left: 10px;
+
       display: flex;
       align-items: center;
       justify-content: center;
       
-      font-weight: bold;
-
       height: 50px;
 
       padding: 0 32px;
@@ -54,6 +53,27 @@ export const Container = styled.div`
       & > svg {
         margin-right: 8px;
       }
-    
+
+      & > p {
+        font-weight: bold;
+      }
+
+      @media only screen and (max-width: 999px) {
+        z-index: 2;
+        padding: 8px 16px;
+        left: unset;
+        right: 20px;
+        top: 20px;
+
+        animation: none;
+
+        & > p {
+          display: none;
+        }
+
+        & > svg {
+          margin-right: 0;
+        }
+      }
   }
 `;

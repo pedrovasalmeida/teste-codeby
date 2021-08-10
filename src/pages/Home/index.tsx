@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   
   return (
     <Container>
-        <button onClick={() => changeDatabase(databaseType === 'abaixo' ? 'acima' : 'abaixo')}><FaExchangeAlt size={14} />Mudar database</button>
+        <button onClick={() => changeDatabase(databaseType === 'abaixo' ? 'acima' : 'abaixo')}><FaExchangeAlt size={14} /><p>Mudar database</p></button>
         <Cart />
     </Container>
   );
